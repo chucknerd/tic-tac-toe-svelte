@@ -1,5 +1,6 @@
 <script>
   const title = "Tic Tac Toe";
+  import Board from "./Board.svelte";
 </script>
 
 <svelte:head>
@@ -7,3 +8,4 @@
 </svelte:head>
 
 <h1>{title}</h1>
+<Board />
