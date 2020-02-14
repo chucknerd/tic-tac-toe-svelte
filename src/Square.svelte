@@ -1,5 +1,6 @@
 <script>
   export let value;
+  export let handleClick;
 </script>
 
 <style>
@@ -20,4 +21,4 @@
   }
 </style>
 
-<button class="square">{value}</button>
+<button class="square" on:click={handleClick}>{value || ''}</button>
