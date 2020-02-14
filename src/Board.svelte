@@ -4,11 +4,13 @@
   let squares = [null, null, null, null, null, null, null, null, null];
   let xIsNext = true;
   $: status = "Next Player: " + (xIsNext ? "X" : "0");
+
   function restartGame() {
     squares = [null, null, null, null, null, null, null, null, null];
     xIsNext = true;
     winner = null;
   }
+
   function handleClick(i) {
     if (!squares[i]) {
       squares[i] = xIsNext ? "X" : "0";
@@ -16,6 +18,7 @@
       winner = calculateWinner(squares);
     }
   }
+
   function calculateWinner(squares) {
     const winningCombo = [
       [0, 1, 2],
